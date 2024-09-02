@@ -1,0 +1,169 @@
+
+.app {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: grid;
+  grid-template-areas:
+    ". title ."
+    ". game controls";
+  grid-template-columns: repeat(3, 1fr);
+}
+
+h3 {
+  text-align: center;
+  grid-area: title;
+  color: #1f2d23;
+}
+
+button {
+  padding: 4px;
+}
+
+.board {
+  border: 2px solid black;
+  user-select: none;
+  margin: auto;
+  grid-area: game;
+}
+
+.controls {
+  grid-area: controls;
+}
+
+.controls.h2 {
+  text-align: center;
+   }
+
+.row {
+  display: flex;
+}
+
+.upcoming {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  gap: 10px;
+
+}
+
+.cell {
+  width: 30px;
+  aspect-ratio: 1;
+  border: 0.2px solid rgb(190, 180, 180);
+  border-bottom: 3px solid rgb(200, 200, 200);
+  border-right: 3px solid rgb(200, 200, 200);
+
+}
+
+.cell.hidden {
+  visibility: hidden;
+}
+
+.cell.Empty {
+  background-color: rgb(200, 200, 200);
+  border-bottom: 3px solid rgb(200, 200, 200);
+  border-right: 3px solid rgb(200, 200, 200);
+}
+
+.cell.I {
+  background-image: linear-gradient(135deg, #FFE302 15%, #EFCC00 85%);
+
+  border-bottom: 3px solid #F2BA49;
+  border-right: 3px solid #F2BA49;
+
+}
+
+.cell.J {
+  background-image: linear-gradient(135deg, #87CEFA 15%, #77B5FE 85%);
+
+  border-bottom: 3px solid #1E90FF;
+  border-right: 3px solid #1E90FF;
+}
+
+.cell.L {
+  background-image: linear-gradient(135deg, #FF9966 15%, #FF7800 85%);
+
+  border-bottom: 3px solid #FF6700;
+  border-right: 3px solid #FF6700;
+}
+
+.cell.O {
+  background-image: linear-gradient(135deg, #fefeb7 15%, #fefe58 85%);
+
+  border-bottom: 3px solid #FFEF00;
+  border-right: 3px solid #FFEF00;
+}
+
+.cell.S {
+  background-image: linear-gradient(135deg, #64E986 15%, #3CD070 85%);
+
+  border-bottom: 3px solid #50C878;
+  border-right: 3px solid #50C878;
+}
+
+.cell.T {
+  background-image: linear-gradient(135deg, #9457EB 15%, #8c1cd3 85%);
+  
+  border-bottom: 3px solid #6531aa;
+  border-right: 3px solid #6531aa;
+}
+
+.cell.Z {
+  background-image: linear-gradient(135deg, #FF6961 15%, #ED1C24 85%);
+
+  border-bottom: 3px solid #C40233;
+  border-right: 3px solid #C40233;
+}
+
+.cell.B {
+  background-image: linear-gradient(135deg, #FF6FFF 15%, #CC33CC 85%);
+
+  border-bottom: 3px solid #D74894;
+  border-right: 3px solid #D74894;
+}
+
+.cell.U {
+  background-image: linear-gradient(135deg, #1560BD 15%, #2243B6 85%);
+
+  border-bottom: 3px solid #00009C;
+  border-right: 3px solid #00009C;
+}
+
+.cell.P {
+  background-image: linear-gradient(135deg, #CB6D51 15%, #A55353 85%);
+
+  border-bottom: 3px solid #A52A2A;
+  border-right: 3px solid #A52A2A;
+}
+
+@media screen and (max-width: 500px) {
+
+  .app {
+    display: flex;
+    flex-direction: column;
+    grid-template-areas:
+      ". title ."
+      ". game controls";
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .cell {
+    width: 25px;
+    aspect-ratio: 1;
+    border: 0.2px solid rgb(190, 180, 180);
+    border-bottom: 3px solid rgb(200, 200, 200);
+    border-right: 3px solid rgb(200, 200, 200);
+  
+  }
+  .upcoming {
+    display: flex;
+
+    justify-content: center;
+    gap: 10px;
+
+  }
+  .controls.h2 {
+ text-align: center;
+  }
+
+
+}
