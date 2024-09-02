@@ -124,8 +124,8 @@ button {
 .cell.U {
   background-image: linear-gradient(135deg, #1560BD 15%, #2243B6 85%);
 
-  border-bottom: 3px solid #00009C;
-  border-right: 3px solid #00009C;
+  border-bottom: 3px solid #0101cf;
+  border-right: 3px solid #0101cf;
 }
 
 .cell.P {
